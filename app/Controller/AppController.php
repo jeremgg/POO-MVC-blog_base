@@ -21,6 +21,17 @@
         public function __construct(){
             $this->viewPath = ROOT . '/app/Views/';
         }
+
+
+
+        /**
+         * Charger la table passé en paramètre
+         * @param  $model_name
+         */
+        protected function loadModel($model_name){
+             $this->$model_name = App::getInstance()->getTable($model_name);
+
+         }
     }
 
 

@@ -78,26 +78,6 @@
 
             return $this->db_instance;
         }
-
-
-
-        /**
-         * rediriger l'utilisateur si la page demandée n'existe pas
-         */
-         public static function notFound(){
-             header('HTTP/1.0 404 Not Found');
-             die('page introuvable');
-         }
-
-
-
-         /**
-         * rediriger l'utilisateur si l'accès n'est pas autorisé
-         */
-        public function forbidden(){
-            header('HTTP/1.0 403 Forbidden');
-            die('accès interdit');
-        }
     }
 
 

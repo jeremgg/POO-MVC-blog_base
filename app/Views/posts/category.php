@@ -1,31 +1,3 @@
-<?php
-
-    //Stocker l'article en fonction de son id
-    $app = App::getInstance();
-
-
-    //stocker la catégorie demandé en fonction de son id
-    $categorie = $app->getTable('Category')->find($_GET['id']);
-
-
-    //si la valeur des paramètres URL n'existent pas, on redirige vers la page 404
-    if($categorie === false){
-        $app->notFound();
-    }
-
-    
-    //stocker les articles de la catégorie correspondante
-    $articles = $app->getTable('Post')->lastByCategory($_GET['id']);
-    
-
-    //Afficher toutes les catégories
-    $categories = $app->getTable('Category')->all();
-?>
-
-
-
-
-
 <!-- AFFICHER LA CATEGORIE EN COURS -->
 <h1><?= $categorie->titre; ?></H1>
 
