@@ -20,33 +20,25 @@
         $page = $_GET['p'];
     }
     else{
-        $page = 'home';
+        $page = 'posts.index';
     }
 
 
 
 
     //Afficher les contenu des pages chargées
-    if($page === 'home'){
-        $controller = new App\Controller\PostsController();
-        $controller->index();
+    $page = explode('.', $page);
+    if($page[0] == 'admin'){
+        $controller = '\App\Controller\Admin\\' . ucfirst($page[1]) . 'Controller';
+        $action = $page[2];
     }
-    elseif($page === 'posts.category'){
-        $controller = new App\Controller\PostsController();
-        $controller->category();
+    else{
+        $controller = '\App\Controller\\' . ucfirst($page[0]) . 'Controller';
+        $action = $page[1];
     }
-    elseif($page === 'posts.single'){
-        $controller = new App\Controller\PostsController();
-        $controller->single();
-    }
-    elseif($page === 'login'){
-        $controller = new App\Controller\UsersController();
-        $controller->login();
-    }
-    elseif($page === 'admin.posts.index'){
-        $controller = new App\Controller\Admin\PostsController();
-        $controller->index();
-    }
+
+    $controller = new $controller();
+    $controller->$action();
 
 
 ?>

@@ -28,9 +28,7 @@ Base d'un projet de blog en php orienté objet avec la structure MVC
           - Dossier admin : contient toutes les pages du back-end
               - Dossier posts : concerne les articles
                   - index.php : page qui liste tous les articles
-                  - add.php : page pour ajouter des articles
-                  - edit.php : page de modification des articles
-                  - delete.php : page de suppression des articles
+                  - edit.php : page de modification et d'ajout des articles
               - Dossier categories : concerne les catégories
                   - index.php : page qui liste tous les catégories
                   - add.php : page pour ajouter des catégories
