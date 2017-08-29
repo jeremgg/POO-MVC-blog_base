@@ -9,7 +9,7 @@ Base d'un projet de blog en php orienté objet avec la structure MVC
 
 
   - App : dossier contenant toutes les class spécifique de l'application. C'est le corps de l'application qui permet de tout gérer
-      - Dossier Controller : Dossier contenant tous nos controller
+      - Dossier Controller : Dossier contenant toute la logique de notre application
           - class PostController : class qui gère l'affichage des articles
           - class AppController : class spécifique à l'application
       - Dossier Entity : contient tous les enregistrements

@@ -66,11 +66,11 @@
 
 
         /**
-         * [single description]
-         * @return [type] [description]
+         * Afficher l'article de la single page en fonction de son id
          */
         public function single(){
-
+            $article = $this->Post->findWitdhCategory($_GET['id']);
+            $this->render('posts.single', compact('article'));
         }
 
     }
