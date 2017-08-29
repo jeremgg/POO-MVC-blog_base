@@ -1,10 +1,3 @@
-<?php
-    //Récupérer tous les articles de tables articles
-    $posts = App::getInstance()->getTable('Post')->all();
-?>
-
-
-
 <h1>Administrer les articles</h1>
 
 

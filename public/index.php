@@ -43,6 +43,10 @@
         $controller = new App\Controller\UsersController();
         $controller->login();
     }
+    elseif($page === 'admin.posts.index'){
+        $controller = new App\Controller\Admin\PostsController();
+        $controller->index();
+    }
 
 
 ?>
