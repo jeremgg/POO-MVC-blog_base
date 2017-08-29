@@ -27,28 +27,22 @@
 
 
     //Afficher les contenu des pages chargées
-        //tous ce qui est affiché...
-        ob_start();
-
-            //Vérifier dans quelle page on veut accéder
-            if($page === 'home'){
-                require ROOT . '/pages/posts/home.php';
-            }
-            elseif($page === 'posts.category'){
-                require ROOT . '/pages/posts/category.php';
-            }
-            elseif($page === 'posts.single'){
-                require ROOT . '/pages/posts/single.php';
-            }
-            elseif($page === 'login'){
-                require ROOT . '/pages/users/login.php';
-            }
-
-        //... On le stocke dans une variable...
-        $content = ob_get_clean();
-
-        //... Puis on charge le template de page
-        require ROOT . '/pages/templates/default.php';
+    if($page === 'home'){
+        $controller = new App\Controller\PostsController();
+        $controller->index();
+    }
+    elseif($page === 'posts.category'){
+        $controller = new App\Controller\PostsController();
+        $controller->category();
+    }
+    elseif($page === 'posts.single'){
+        $controller = new App\Controller\PostsController();
+        $controller->single();
+    }
+    elseif($page === 'login'){
+        $controller = new App\Controller\UsersController();
+        $controller->login();
+    }
 
 
 ?>
