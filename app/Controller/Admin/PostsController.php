@@ -37,7 +37,7 @@
         public function add(){
             //Si des données sont envoyées
             if(!empty($_POST)){
-                //Ajouter l'enregistrement dans la BDD en fonction de l'id
+                //Ajouter l'enregistrement dans la BDD
                 $result = $this->Post->create([
                     'titre' => $_POST['titre'],
                     'contenu' => $_POST['contenu'],

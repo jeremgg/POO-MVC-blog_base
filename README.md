@@ -12,6 +12,7 @@ Base d'un projet de blog en php orienté objet avec la structure MVC
       - Dossier Controller : Dossier contenant toute la logique de notre application
           - Dossier Admin : contient les class qui gèrent l'affichage le front end
               - class PostController : class qui gère l'affichage des articles dans le back-end
+              - class CategoriesController : class qui gère l'affichage des catégories dans le back-end
               - class AppController : class spécifique à l'application dans le back-end
           - class AppController : class spécifique à l'application
           - class PostController : class qui gère l'affichage des articles
@@ -31,9 +32,7 @@ Base d'un projet de blog en php orienté objet avec la structure MVC
                   - edit.php : page de modification et d'ajout des articles
               - Dossier categories : concerne les catégories
                   - index.php : page qui liste tous les catégories
-                  - add.php : page pour ajouter des catégories
-                  - edit.php : page de modification des catégories
-                  - delete.php : page de suppression des catégories
+                  - edit.php : page de modification et d'ajout des catégories
 
       - class App : contient les méthodes globales à l'ensemble de l'application
       - class Autoloader : autoloading des class spécifique au dossier app
