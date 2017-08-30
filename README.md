@@ -56,8 +56,7 @@ Base d'un projet de blog en php orienté objet avec la structure MVC
   - public  : dossier contenant tous les fichiers publics
       - Dossier css
       - Dossier js
-      - index.php : racine du site front-end
-      - Admin.php : racine du site back-end
+      - index.php : racine du site
 
 
 
