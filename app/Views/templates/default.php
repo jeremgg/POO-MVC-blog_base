@@ -1,40 +1,25 @@
+<?php include("includes/header.php"); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <li><a href="index.php">Home</a></li>
 
-    <title><?= App::getInstance()->title; ?></title>
+    <?php if(isset($_GET['p'])) : ?>
+        <?php switch($_GET['p']) :
+            case 'posts.single' : ?>
+                <li><a href="index.php?p=admin.posts.index">Admin</a></li>
+                <?php break; ?>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  </head>
+            <?php case "posts.category": ?>
+                <li><a href="index.php?p=admin.posts.index">Admin</a></li>
+                <?php break; ?>
 
-  <body>
+            <?php default: ?>
+                <li><a href="index.php?p=admin.posts.index">Articles</a></li>
+                <li><a href="index.php?p=admin.categories.index">Catégories</a></li>
+        <?php endswitch; ?>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Project name</a>
-        </div>
-      </div>
-    </nav>
+    <?php else : ?>
+        <li><a href="index.php?p=admin.posts.index">Admin</a></li>
+    <?php endif; ?>
 
-    <div class="container">
 
-      <div class="starter-template" style="padding-top: 100px">
-        <?php
-          /**
-           * variable qui contient le contenu des pages
-           */
-          echo $content;
-        ?>
-      </div>
-    </div><!-- /.container -->
-  </body>
-</html>
+<?php include("includes/footer.php"); ?>
